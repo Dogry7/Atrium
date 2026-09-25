@@ -1,0 +1,28 @@
+{
+  "name": "atrium",
+  "version": "1.0.0",
+  "description": "Atrium: a local multi-agent (single + A2A) AI workflow system with an isometric office world.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "bin": {
+    "atrium": "bin/atrium.js",
+    "atrium-mcp": "bin/atrium-mcp.js"
+  },
+  "engines": {
+    "node": ">=20.10"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node test/run.js unit integration",
+    "test:e2e": "node test/run.js e2e",
+    "test:all": "node test/run.js unit integration e2e"
+  },
+  "devDependencies": {
+    "@a2a-js/sdk": "^1.2.1",
+    "@modelcontextprotocol/server-everything": "^2025.9.25",
+    "express": "^5.2.1",
+    "playwright": "^1.56.0"
+  }
+}
